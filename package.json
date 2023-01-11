@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Small project for quickly testing Cypress.io test runner",
   "scripts": {
-    "cypress:run": "CYPRESS_CACHE_FOLDER=.cy-cache cypress run",
-    "cypress:open": "CYPRESS_CACHE_FOLDER=.cy-cache cypress open",
-    "cypress:verify": "CYPRESS_CACHE_FOLDER=.cy-cache cypress verify",
-    "cypress:version": "CYPRESS_CACHE_FOLDER=.cy-cache cypress version",
-    "cypress:info": "CYPRESS_CACHE_FOLDER=.cy-cache cypress info",
-    "cypress:cache:list": "CYPRESS_CACHE_FOLDER=.cy-cache cypress cache list",
+    "cypress:run": "CYPRESS_CACHE_FOLDER=.cy-cache cypress install && cypress run",
+    "cypress:open": "CYPRESS_CACHE_FOLDER=.cy-cache cypress install && cypress open",
+    "cypress:verify": "CYPRESS_CACHE_FOLDER=.cy-cache cypress install && cypress verify",
+    "cypress:version": "CYPRESS_CACHE_FOLDER=.cy-cache cypress install && cypress version",
+    "cypress:info": "CYPRESS_CACHE_FOLDER=.cy-cache cypress install && cypress info",
+    "cypress:cache:list": "CYPRESS_CACHE_FOLDER=.cy-cache cypress install && cypress cache list",
     "list-videos": "ls -l cypress/videos",
     "check-videos": "ok-file 'cypress/videos/*.mp4'",
     "set-status": "set-status"
@@ -17,7 +17,7 @@
   "author": "Gleb Bahmutov <gleb@cypress.io>",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "8.7.0",
+    "cypress": "^12.3",
     "ok-file": "1.5.2"
   },
   "repository": {
